@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>URDT TIJHAAR SS | Secondary School</title>
+  <meta name="description" content="URDTtijhaar SS: staff and student records and academic performance, 2020 to 2026.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home"><span class="crest">U</span><span>URDT TIJHAAR SS</span></a>
+    <button class="burger" id="burger" aria-label="Open menu"
+      aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#students">Students</a>
+      <a href="#performance">Performance</a>
+      <a href="#admissions">Admissions</a>
+      <a href="#campus">Campus</a>
+      <button class="navbtn" id="loginBtn" type="button">Staff login</button>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+
+    <video source src="campus.mp4" type="mp4">
+    </video>
+    <div class="veil"></div>
+    <div class="hero-inner">
+      <p class="kicker">Secondary school, S1 to S6</p>
+      <h1>URDT TIJHAAR SS</h1>
+      <p class="lead">Seven years of results, one record book. Browse our teachers, our students and how every cohort
+        has performed since 2020.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#performance">See results 2020–2026</a>
+        <a class="btn ghost" href="#admissions">Apply for admission</a>
+      </div>
+    </div>
+    <ul class="hero-stats" id="heroStats"></ul>
+  </section>
+
+  <main id="main">
+
+    <section class="sec about" id="about">
+      <div class="wrap split">
+        <div class="photo-stack">
+          <img src="main-building.jpg" alt="URDTtijhaar SS main building with clock tower" loading="lazy">
+          <img class="inset" src="courtyard.jpg" alt="Courtyard with paved floor and classroom blocks" loading="lazy">
+        </div>
+        <div>
+          <h2>A school that keeps its promises in writing</h2>
+          <p>URDT TIJHAAR SS teaches students from Senior 1 to Senior 6 and publishes its numbers every year. This site
+            holds the staff register, the student register and the examination record for 2020 to 2026, so parents,
+            teachers and governors read the same facts.</p>
+          <ul class="values">
+            <li><strong>Discipline.</strong> Punctual, uniformed, prepared.</li>
+            <li><strong>Scholarship.</strong> Every subject taught by a qualified teacher.</li>
+            <li><strong>Service.</strong> Prefects, clubs and community work in every term.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec alt" id="teachers">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Teachers’ records</h2>
+          <p>Staff register for the current year. Staff login required.</p>
+        </div>
+        <div class="lock" data-lock>
+          <h3>Login required</h3>
+          <p>The teachers’ records are private. Log in with your school account to view them.</p><button
+            class="btn primary" type="button" data-login>Log in</button>
+        </div>
+        <div class="gated" hidden>
+          <div class="tools">
+            <input type="search" id="tSearch" placeholder="Search teachers" aria-label="Search teachers">
+            <select id="tDept" aria-label="Filter by department">
+              <option value="">All departments</option>
+            </select>
+            <span class="count" id="tCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="tTable">
+              <thead>
+                <tr>
+                  <th data-k="id">Staff no.</th>
+                  <th data-k="name">Name</th>
+                  <th data-k="subject">Subject</th>
+                  <th data-k="dept">Department</th>
+                  <th data-k="qual">Qualification</th>
+                  <th data-k="joined">Joined</th>
+                  <th data-k="classes">Classes</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="students">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Students’ records</h2>
+          <p>Register with latest-year average marks. Staff login required.</p>
+        </div>
+        <div class="lock" data-lock>
+          <h3>Login required</h3>
+          <p>The students’ records are private. Log in with your school account to view them.</p><button
+            class="btn primary" type="button" data-login>Log in</button>
+        </div>
+        <div class="gated" hidden>
+          <div class="tools">
+            <input type="search" id="sSearch" placeholder="Search students" aria-label="Search students">
+            <select id="sClass" aria-label="Filter by class">
+              <option value="">All classes</option>
+            </select>
+            <select id="sGender" aria-label="Filter by gender">
+              <option value="">All genders</option>
+              <option>F</option>
+              <option>M</option>
+            </select>
+            <span class="count" id="sCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="sTable">
+              <thead>
+                <tr>
+                  <th data-k="id">Adm. no.</th>
+                  <th data-k="name">Name</th>
+                  <th data-k="cls">Class</th>
+                  <th data-k="gender">Sex</th>
+                  <th data-k="house">House</th>
+                  <th data-k="avg">2026 average</th>
+                  <th data-k="grade">Grade</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-band" aria-hidden="true">
+      <img src="classroom-block.jpg" alt="">
+      <div>
+        <p>Light, shaded verandas and open classrooms: built for learning in all weather.</p>
+      </div>
+    </section>
+
+    <section class="sec alt" id="performance">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Performance, 2020 to 2026</h2>
+          <p>Whole-school examination results. Choose a year to see subject averages.</p>
+        </div>
+        <div class="perf-grid">
+          <div class="card">
+            <h3>Average mark and pass rate by year</h3>
+            <svg id="trend" viewBox="0 0 640 320" role="img"
+              aria-label="Line chart of average mark and pass rate 2020 to 2026"></svg>
+            <div class="legend"><span class="k avg"></span>Average mark (%)<span class="k pass"></span>Pass rate (%)
+            </div>
+          </div>
+          <div class="card">
+            <div class="year-tabs" id="yearTabs" role="tablist" aria-label="Choose year"></div>
+            <h3 id="yearTitle">Subject averages</h3>
+            <div id="bars" class="bars"></div>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table id="pTable">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Candidates</th>
+                <th>Average mark</th>
+                <th>Pass rate</th>
+                <th>Distinctions</th>
+                <th>Best subject</th>
+                <th>Change vs. previous year</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="note">Records shown are sample data for demonstration. Replace them in <code>js/data.js</code> with
+          the school’s real figures.</p>
+      </div>
+    </section>
+
+    <section class="sec alt" id="admissions">
+      <div class="wrap split adm">
+        <div>
+          <h2>Admissions</h2>
+          <p>Apply for Senior 1 to Senior 6. Fill in the form and send it by email or WhatsApp, or call the records
+            office. We confirm dates, fees and requirements when we reply.</p>
+          <ol class="steps">
+            <li>Complete the application form.</li>
+            <li>The records office contacts the parent or guardian.</li>
+            <li>Bring the student’s birth certificate, last report card and passport photos.</li>
+            <li>Receive the admission decision and joining instructions.</li>
+          </ol>
+          <p class="reach"><a href="tel:+256701959431">0701 959 431</a> · <a href="tel:+256792717766">0792 717
+              766</a><br><a href="mailto:peterkiiza803@gmail.com">peterkiiza803@gmail.com</a></p>
+        </div>
+        <form id="admForm" class="adm-form" novalidate>
+          <h3>Admission application</h3>
+          <label>Student’s full name<input name="sname" required autocomplete="off"></label>
+          <div class="row2">
+            <label>Date of birth<input name="dob" type="date"></label>
+            <label>Sex<select name="sex">
+                <option>Female</option>
+                <option>Male</option>
+              </select></label>
+          </div>
+          <div class="row2">
+            <label>Class applying for<select name="cls">
+                <option>S1</option>
+                <option>S2</option>
+                <option>S3</option>
+                <option>S4</option>
+                <option>S5</option>
+                <option>S6</option>
+              </select></label>
+            <label>Previous school<input name="prev"></label>
+          </div>
+          <label>Parent or guardian name<input name="pname" required></label>
+          <div class="row2">
+            <label>Phone number<input name="pphone" type="tel" required></label>
+            <label>Email<input name="pmail" type="email"></label>
+          </div>
+          <label>Anything else we should know<textarea name="note" rows="2"></textarea></label>
+          <button class="btn primary" type="submit">Send application</button>
+          <p class="form-msg" id="admMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="sec" id="campus">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Around the campus</h2>
+          <p>Tap a photo to enlarge it.</p>
+        </div>
+        <div class="gallery">
+          <figure class="g1"><img src="school-field.jpg"
+              alt="Students on the school field in front of the classroom block" loading="lazy">
+            <figcaption>School field</figcaption>
+          </figure>
+          <figure class="g2"><img src="new-wing.jpg" alt="New classroom wing with paved courtyard and young trees"
+              loading="lazy">
+            <figcaption>New wing</figcaption>
+          </figure>
+          <figure class="g3"><img src="classroom-block.jpg" alt="Brick-red classroom block with balconies"
+              loading="lazy">
+            <figcaption>Classroom block</figcaption>
+          </figure>
+          <figure class="g4"><img src="courtyard.jpg" alt="Courtyard after rain" loading="lazy">
+            <figcaption>Courtyard</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot" id="contact">
+    <div class="wrap foot-grid">
+      <div>
+        <a class="brand" href="#home"><span class="crest">U</span><span>URDTtijhaar SS</span></a>
+        <ul class="contacts">
+          <li>Phone: <a href="tel:+256701959431">0701 959 431</a> or <a href="tel:+256792717766">0792 717 766</a></li>
+          <li>WhatsApp: <a href="https://wa.me/256701959431" target="_blank" rel="noopener">0701 959 431</a></li>
+          <li>Email: <a href="mailto:peterkiiza803@gmail.com">peterkiiza803@gmail.com</a></li>
+        </ul>
+      </div>
+      <form id="contactForm" novalidate>
+        <h3>Send us a message</h3>
+        <label>Your name<input name="n" required></label>
+        <label>Message<textarea name="m" rows="3" required></textarea></label>
+        <button class="btn primary" type="submit">Send message</button>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+    <p class="copy">© <span id="yr"></span> URDT TIJHAAR SS. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="close" id="mClose" aria-label="Close">×</button>
+      <h3 id="mTitle"></h3>
+      <p id="mSub"></p>
+      <div id="mBody"></div>
+    </div>
+  </div>
+  <div class="modal" id="loginModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="lTitle">
+      <button class="close" id="lClose" aria-label="Close">×</button>
+      <h3 id="lTitle">Staff login</h3>
+      <p class="muted">Log in to open the teachers’ and students’ records.</p>
+      <form id="loginForm" class="stack" novalidate>
+        <label>Username<input name="u" autocomplete="username" required></label>
+        <label>Password<input name="p" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary" type="submit">Log in</button>
+        <p class="form-msg err" id="lMsg" role="alert"></p>
+      </form>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox" hidden><img alt=""><button class="close" aria-label="Close">×</button></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
